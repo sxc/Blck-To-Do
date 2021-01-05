@@ -11,33 +11,35 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
+//    @FetchRequest(
+//        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+//        animation: .default)
+    private var items: FetchedResults<ToDoItem>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-            }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
+//        List {
+//            ForEach(items) { item in
+//                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+//            }
+//            .onDelete(perform: deleteItems)
+//        }
+//        .toolbar {
+//            #if os(iOS)
+//            EditButton()
+//            #endif
+//
+//            Button(action: addItem) {
+//                Label("Add Item", systemImage: "plus")
+//            }
+//        }
+        
+        Text("Hello")
     }
 
     private func addItem() {
         withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            let newItem = ToDoItem(context: viewContext)
+//            newItem.timestamp = Date()
 
             do {
                 try viewContext.save()
@@ -73,8 +75,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+//    }
+//}

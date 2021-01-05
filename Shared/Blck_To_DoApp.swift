@@ -13,7 +13,7 @@ struct Blck_To_DoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TasksView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
