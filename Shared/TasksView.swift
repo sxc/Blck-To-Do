@@ -36,7 +36,9 @@ struct TasksView: View {
                     HStack {
 //                        Text(item)
                         Text(item.taskTitle ?? "Empty")
+                        
                         Spacer()
+                        
                         Button(action: {
 //                            print("Task Done.")
                             markTaskAsDone(at: fetchedItems.firstIndex(of: item)!)
@@ -45,6 +47,7 @@ struct TasksView: View {
                             .imageScale(.large)
                             .foregroundColor(.gray)
                         }
+                        .buttonStyle(BorderlessButtonStyle())
                     }
                 }
                 .frame(height: rowHeight)
