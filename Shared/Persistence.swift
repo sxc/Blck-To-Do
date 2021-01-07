@@ -22,13 +22,13 @@ struct PersistenceController {
             let newItem = ToDoItem(context: viewContext)
             newItem.createdAt = Date()
             newItem.taskDone = false
-            newItem.taskTitle = "Preview Task"
+            newItem.taskTitle = "Preview Task1"
         }
         for _ in 0..<2 {
             let newItem = ToDoItem(context: viewContext)
             newItem.createdAt = Date()
             newItem.taskDone = false
-            newItem.taskTitle = "Preview Task"
+            newItem.taskTitle = "Preview Task2"
             
         }
         

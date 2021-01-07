@@ -25,21 +25,21 @@ struct TasksView: View {
     var sampleTasks = [
     "Task One", "Task Two", "Task Three"
     ]
-    
-    
     var body: some View {
         
         NavigationView {
             List {
-                ForEach(sampleTasks, id: \.self) { item in
+                ForEach(fetchedItems, id: \.self) { item in
                     
                     // To-Do's (dynamic row(s))
                     
                     HStack {
-                        Text(item)
+//                        Text(item)
+                        Text(item.taskTitle ?? "Empty")
                         Spacer()
                         Button(action: {
-                            print("Task Done.")
+//                            print("Task Done.")
+                            markTaskAsDone(at: fetchedItems.firstIndex(of: item)!)
                         }) {
                         Image(systemName: "circle")
                             .imageScale(.large)
@@ -52,16 +52,21 @@ struct TasksView: View {
                 // Row for adding a new task (static row)
                 
                 HStack {
-                    TextField("Add task...", text: $newTaskTitle, onCommit: {print("New task title entered.")})
-                    Image(systemName: "plus")
-                        .imageScale(.large)
+                    TextField("Add task...", text: $newTaskTitle, onCommit: {
+//                        print("New task title entered.")
+                        saveTask()
+                        
+                    })
+                    Button(action: {
+                        saveTask()
+                    }) {
+                        Image(systemName: "plus")
+                            .imageScale(.large)
+                    }
+                    
+                   
                 }
                 .frame(height: rowHeight)
-                
-                
-                
-                
-                
                 // Row for navigating to the view containing accomplished tasks (static row)
                 Text("Tasks done")
                     .frame(height: rowHeight)
@@ -72,10 +77,43 @@ struct TasksView: View {
             .navigationTitle("To-Do")
         }
     }
+    
+    func saveTask() {
+        guard self.newTaskTitle != "" else {
+            return
+            
+        }
+        
+        let newToDoItem = ToDoItem(context: viewContext)
+        newToDoItem.taskTitle = newTaskTitle
+        newToDoItem.createdAt = Date()
+        newToDoItem.taskDone = false
+        
+        do  {
+            try viewContext.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        newTaskTitle = ""
+    }
+    
+    func markTaskAsDone(at index: Int) {
+        let item = fetchedItems[index]
+        item.taskDone = true
+        do {
+            try viewContext.save()
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+
+    
 }
+
 
 struct TasksView_Previews: PreviewProvider {
     static var previews: some View {
-        TasksView()
+        TasksView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
