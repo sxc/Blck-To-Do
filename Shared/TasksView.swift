@@ -68,8 +68,14 @@ struct TasksView: View {
                 }
                 .frame(height: rowHeight)
                 // Row for navigating to the view containing accomplished tasks (static row)
-                Text("Tasks done")
-                    .frame(height: rowHeight)
+                
+                NavigationLink(
+                    destination: TasksDoneView()) {
+                        Text("Tasks done")
+                            .frame(height: rowHeight)
+                    }
+                
+                   
                 
                 
             }
