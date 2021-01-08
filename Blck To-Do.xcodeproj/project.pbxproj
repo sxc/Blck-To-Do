@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		34AE405425A69C4800B9E08E /* TasksDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE405325A69C4800B9E08E /* TasksDoneView.swift */; };
 		34AE405525A69C4800B9E08E /* TasksDoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE405325A69C4800B9E08E /* TasksDoneView.swift */; };
+		34AE40A225A6E7C500B9E08E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AE40A125A6E7C500B9E08E /* WidgetKit.framework */; };
+		34AE40A425A6E7C500B9E08E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34AE40A325A6E7C500B9E08E /* SwiftUI.framework */; };
+		34AE40A725A6E7C500B9E08E /* OpenTasksWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AE40A625A6E7C500B9E08E /* OpenTasksWidget.swift */; };
+		34AE40A925A6E7C800B9E08E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34AE40A825A6E7C800B9E08E /* Assets.xcassets */; };
+		34AE40AD25A6E7C800B9E08E /* OpenTasksWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 34AE409F25A6E7C500B9E08E /* OpenTasksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		34AE40B525A6E81600B9E08E /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F39E7B25A43D8A00E83946 /* Persistence.swift */; };
+		34AE40B925A6E82300B9E08E /* Blck_To_Do.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F39E7725A43D8A00E83946 /* Blck_To_Do.xcdatamodeld */; };
 		34F39E8D25A43D8E00E83946 /* Blck_To_Do.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F39E7725A43D8A00E83946 /* Blck_To_Do.xcdatamodeld */; };
 		34F39E8E25A43D8E00E83946 /* Blck_To_Do.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34F39E7725A43D8A00E83946 /* Blck_To_Do.xcdatamodeld */; };
 		34F39E8F25A43D8E00E83946 /* Blck_To_DoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F39E7925A43D8A00E83946 /* Blck_To_DoApp.swift */; };
@@ -23,8 +30,38 @@
 		34F39EA325A43FF800E83946 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F39EA125A43FF800E83946 /* TasksView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		34AE40AB25A6E7C800B9E08E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34F39E7225A43D8A00E83946 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34AE409E25A6E7C500B9E08E;
+			remoteInfo = OpenTasksWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		34AE40B125A6E7C800B9E08E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				34AE40AD25A6E7C800B9E08E /* OpenTasksWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		34AE405325A69C4800B9E08E /* TasksDoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksDoneView.swift; sourceTree = "<group>"; };
+		34AE409F25A6E7C500B9E08E /* OpenTasksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenTasksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		34AE40A125A6E7C500B9E08E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		34AE40A325A6E7C500B9E08E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		34AE40A625A6E7C500B9E08E /* OpenTasksWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenTasksWidget.swift; sourceTree = "<group>"; };
+		34AE40A825A6E7C800B9E08E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		34AE40AA25A6E7C800B9E08E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34F39E7825A43D8A00E83946 /* Shared.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shared.xcdatamodel; sourceTree = "<group>"; };
 		34F39E7925A43D8A00E83946 /* Blck_To_DoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blck_To_DoApp.swift; sourceTree = "<group>"; };
 		34F39E7A25A43D8A00E83946 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +76,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		34AE409C25A6E7C500B9E08E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AE40A425A6E7C500B9E08E /* SwiftUI.framework in Frameworks */,
+				34AE40A225A6E7C500B9E08E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34F39E7E25A43D8E00E83946 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,12 +102,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34AE40A025A6E7C500B9E08E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34AE40A125A6E7C500B9E08E /* WidgetKit.framework */,
+				34AE40A325A6E7C500B9E08E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34AE40A525A6E7C500B9E08E /* OpenTasksWidget */ = {
+			isa = PBXGroup;
+			children = (
+				34AE40A625A6E7C500B9E08E /* OpenTasksWidget.swift */,
+				34AE40A825A6E7C800B9E08E /* Assets.xcassets */,
+				34AE40AA25A6E7C800B9E08E /* Info.plist */,
+			);
+			path = OpenTasksWidget;
+			sourceTree = "<group>";
+		};
 		34F39E7125A43D8A00E83946 = {
 			isa = PBXGroup;
 			children = (
 				34F39E7625A43D8A00E83946 /* Shared */,
 				34F39E8325A43D8E00E83946 /* iOS */,
 				34F39E8A25A43D8E00E83946 /* macOS */,
+				34AE40A525A6E7C500B9E08E /* OpenTasksWidget */,
+				34AE40A025A6E7C500B9E08E /* Frameworks */,
 				34F39E8225A43D8E00E83946 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +152,7 @@
 			children = (
 				34F39E8125A43D8E00E83946 /* Blck To-Do.app */,
 				34F39E8925A43D8E00E83946 /* Blck To-Do.app */,
+				34AE409F25A6E7C500B9E08E /* OpenTasksWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -109,6 +177,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		34AE409E25A6E7C500B9E08E /* OpenTasksWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34AE40AE25A6E7C800B9E08E /* Build configuration list for PBXNativeTarget "OpenTasksWidgetExtension" */;
+			buildPhases = (
+				34AE409B25A6E7C500B9E08E /* Sources */,
+				34AE409C25A6E7C500B9E08E /* Frameworks */,
+				34AE409D25A6E7C500B9E08E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenTasksWidgetExtension;
+			productName = OpenTasksWidgetExtension;
+			productReference = 34AE409F25A6E7C500B9E08E /* OpenTasksWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		34F39E8025A43D8E00E83946 /* Blck To-Do (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34F39E9925A43D8E00E83946 /* Build configuration list for PBXNativeTarget "Blck To-Do (iOS)" */;
@@ -116,10 +201,12 @@
 				34F39E7D25A43D8E00E83946 /* Sources */,
 				34F39E7E25A43D8E00E83946 /* Frameworks */,
 				34F39E7F25A43D8E00E83946 /* Resources */,
+				34AE40B125A6E7C800B9E08E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				34AE40AC25A6E7C800B9E08E /* PBXTargetDependency */,
 			);
 			name = "Blck To-Do (iOS)";
 			productName = "Blck To-Do (iOS)";
@@ -152,6 +239,9 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					34AE409E25A6E7C500B9E08E = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					34F39E8025A43D8E00E83946 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -175,11 +265,20 @@
 			targets = (
 				34F39E8025A43D8E00E83946 /* Blck To-Do (iOS) */,
 				34F39E8825A43D8E00E83946 /* Blck To-Do (macOS) */,
+				34AE409E25A6E7C500B9E08E /* OpenTasksWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		34AE409D25A6E7C500B9E08E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AE40A925A6E7C800B9E08E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34F39E7F25A43D8E00E83946 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +298,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		34AE409B25A6E7C500B9E08E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34AE40B925A6E82300B9E08E /* Blck_To_Do.xcdatamodeld in Sources */,
+				34AE40A725A6E7C500B9E08E /* OpenTasksWidget.swift in Sources */,
+				34AE40B525A6E81600B9E08E /* Persistence.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		34F39E7D25A43D8E00E83946 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -227,7 +336,62 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		34AE40AC25A6E7C800B9E08E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34AE409E25A6E7C500B9E08E /* OpenTasksWidgetExtension */;
+			targetProxy = 34AE40AB25A6E7C800B9E08E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		34AE40AF25A6E7C800B9E08E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = OpenTasksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shenxiaochun.Blck-To-Do.OpenTasksWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34AE40B025A6E7C800B9E08E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SX2P37942F;
+				INFOPLIST_FILE = OpenTasksWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shenxiaochun.Blck-To-Do.OpenTasksWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		34F39E9725A43D8E00E83946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -342,6 +506,7 @@
 		34F39E9A25A43D8E00E83946 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -364,6 +529,7 @@
 		34F39E9B25A43D8E00E83946 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +601,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		34AE40AE25A6E7C800B9E08E /* Build configuration list for PBXNativeTarget "OpenTasksWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34AE40AF25A6E7C800B9E08E /* Debug */,
+				34AE40B025A6E7C800B9E08E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		34F39E7525A43D8A00E83946 /* Build configuration list for PBXProject "Blck To-Do" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
